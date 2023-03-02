@@ -1,7 +1,7 @@
 {
-  "bulbasaur": {
+  "Bulbasaur": {
     "id": 1,
-    "name": "bulbasaur",
+    "name": "Bulbasaur",
     "gen": 1,
     "type1": "grass",
     "type2": "poison",
@@ -11,6 +11,7 @@
     "gender": "1:7",
     "ability": ["Overgrow"],
     "weaknesses": ["fire", "psychic", "flying", "ice"],
+    "evolution": ["Bulbasaur", "Level 16", "Ivysaur", "Level 32", "Venusaur"],
     "stats": {
       "hp": 45,
       "attack": 49,
@@ -20,9 +21,9 @@
       "speed": 45
     }
   },
-  "ivysaur": {
+  "Ivysaur": {
     "id": 2,
-    "name": "ivysaur",
+    "name": "Ivysaur",
     "gen": 1,
     "type1": "grass",
     "type2": "poison",
@@ -32,6 +33,7 @@
     "gender": "1:7",
     "ability": ["Overgrow"],
     "weaknesses": ["fire", "psychic", "flying", "ice"],
+    "evolution": ["Bulbasaur", "Level 16", "Ivysaur", "Level 32", "Venusaur"],
     "stats": {
       "hp": 60,
       "attack": 62,
@@ -41,9 +43,9 @@
       "speed": 60
     }
   },
-  "venusaur": {
+  "Venusaur": {
     "id": 3,
-    "name": "venusaur",
+    "name": "Venusaur",
     "gen": 1,
     "type1": "grass",
     "type2": "poison",
@@ -53,6 +55,7 @@
     "gender": "1:7",
     "ability": ["Overgrow"],
     "weaknesses": ["fire", "psychic", "flying", "ice"],
+    "evolution": ["Bulbasaur", "Level 16", "Ivysaur", "Level 32", "Venusaur"],
     "stats": {
       "hp": 80,
       "attack": 82,
@@ -62,9 +65,9 @@
       "speed": 80
     }
   },
-  "charmander": {
+  "Charmander": {
     "id": 4,
-    "name": "charmander",
+    "name": "Charmander",
     "gen": 1,
     "type1": "fire",
     "type2": null,
@@ -74,6 +77,7 @@
     "gender": "1:7",
     "ability": ["Blaze"],
     "weaknesses": ["water", "ground", "rock"],
+    "evolution": ["Charmander", "Level 16", "Charmeleon", "Level 36", "Charizard"],
     "stats": {
       "hp": 39,
       "attack": 52,
@@ -83,9 +87,9 @@
       "speed": 65
     }
   },
-  "charmeleon": {
+  "Charmeleon": {
     "id": 5,
-    "name": "charmeleon",
+    "name": "Charmeleon",
     "gen": 1,
     "type1": "fire",
     "type2": null,
@@ -95,6 +99,7 @@
     "gender": "1:7",
     "ability": ["Blaze"],
     "weaknesses": ["water", "ground", "rock"],
+    "evolution": ["Charmander", "Level 16", "Charmeleon", "Level 36", "Charizard"],
     "stats": {
       "hp": 58,
       "attack": 64,
@@ -104,9 +109,9 @@
       "speed": 80
     }
   },
-  "charizard": {
+  "Charizard": {
     "id": 6,
-    "name": "charizard",
+    "name": "Charizard",
     "gen": 1,
     "type1": "fire",
     "type2": "flying",
@@ -116,6 +121,7 @@
     "gender": "1:7",
     "ability": ["Blaze"],
     "weaknesses": ["water", "electric", "rock"],
+    "evolution": ["Charmander", "Level 16", "Charmeleon", "Level 36", "Charizard"],
     "stats": {
       "hp": 78,
       "attack": 84,
@@ -125,9 +131,9 @@
       "speed": 100
     }
   },
-  "squirtle": {
+  "Squirtle": {
     "id": 7,
-    "name": "squirtle",
+    "name": "Squirtle",
     "gen": 1,
     "type1": "water",
     "type2": null,
@@ -137,6 +143,7 @@
     "gender": "1:7",
     "ability": ["Torrent"],
     "weaknesses": ["grass", "electric"],
+    "evolution": ["Squirtle", "Level 16", "Wartortle", "Level 36", "Blastoise"],
     "stats": {
       "hp": 44,
       "attack": 48,
@@ -146,9 +153,9 @@
       "speed": 43
     }
   },
-  "wartortle": {
+  "Wartortle": {
     "id": 8,
-    "name": "wartortle",
+    "name": "Wartortle",
     "gen": 1,
     "type1": "water",
     "type2": null,
@@ -158,6 +165,7 @@
     "gender": "1:7",
     "ability": ["Torrent"],
     "weaknesses": ["grass", "electric"],
+    "evolution": ["Squirtle", "Level 16", "Wartortle", "Level 36", "Blastoise"],
     "stats": {
       "hp": 59,
       "attack": 63,
@@ -167,9 +175,9 @@
       "speed": 58
     }
   },
-  "blastoise": {
+  "Blastoise": {
     "id": 9,
-    "name": "blastoise",
+    "name": "Blastoise",
     "gen": 1,
     "type1": "water",
     "type2": null,
@@ -179,6 +187,7 @@
     "gender": "1:7",
     "ability": ["Torrent"],
     "weaknesses": ["grass", "electric"],
+    "evolution": ["Squirtle", "Level 16", "Wartortle", "Level 36", "Blastoise"],
     "stats": {
       "hp": 79,
       "attack": 83,
@@ -188,9 +197,9 @@
       "speed": 78
     }
   },
-  "beedrill": {
+  "Beedrill": {
     "id": 15,
-    "name": "beedrill",
+    "name": "Beedrill",
     "gen": 1,
     "type1": "bug",
     "type2": "poison",
@@ -200,6 +209,7 @@
     "gender": "4:4",
     "ability": ["swarm"],
     "weaknesses": ["fire", "psychic", "flying", "rock"],
+    "evolution": ["Weedle", "Level 7", "Kakuna", "Level 10", "Beedrill"],
     "stats": {
       "hp": 65,
       "attack": 90,
@@ -209,9 +219,9 @@
       "speed": 75
     }
   },
-  "pikachu": {
+  "Pikachu": {
     "id": 25,
-    "name": "pikachu",
+    "name": "Pikachu",
     "gen": 1,
     "type1": "electric",
     "type2": null,
@@ -221,6 +231,7 @@
     "ability": ["Static"],
     "gender": "4:4",
     "weaknesses": ["ground"],
+    "evolution": ["Pichu", "high Friendship", "Pikachu", "use Thunder Stone", "Raichu"],
     "stats": {
       "hp": 35,
       "attack": 55,
@@ -230,9 +241,9 @@
       "speed": 90
     }
   },
-  "clefairy": {
+  "Clefairy": {
     "id": 35,
-    "name": "clefairy",
+    "name": "Clefairy",
     "gen": 1,
     "type1": "fairy",
     "type2": null,
@@ -242,6 +253,7 @@
     "gender": "6:2",
     "ability": ["Cute Charm", "Magic Guard"],
     "weaknesses": ["steel"],
+    "evolution": ["Cleffa", "high Friendship", "Clefairy", "use Moon Stone", "Clefable"],
     "stats": {
       "hp": 70,
       "attack": 45,
@@ -251,9 +263,9 @@
       "speed": 35
     }
   },
-  "dugtrio": {
+  "Dugtrio": {
     "id": 51,
-    "name": "dugtrio",
+    "name": "Dugtrio",
     "gen": 1,
     "type1": "ground",
     "type2": null,
@@ -263,6 +275,7 @@
     "gender": "4:4",
     "ability": ["Sand Veil", "Arena Trap"],
     "weaknesses": ["water", "grass", "ice"],
+    "evolution": ["Diglett", "Level 26", "Dugtrio"],
     "stats": {
       "hp": 35,
       "attack": 100,
@@ -272,9 +285,9 @@
       "speed": 120
     }
   },
-  "onix": {
+  "Onix": {
     "id": 95,
-    "name": "onix",
+    "name": "Onix",
     "gen": 1,
     "type1": "rock",
     "type2": "ground",
@@ -284,6 +297,7 @@
     "gender": "4:4",
     "ability": ["Rock Head", "Sturdy"],
     "weaknesses": ["steel", "fighting", "water", "ice", "grass", "ground"],
+    "evolution": ["Onix", "trade holding Metal Coat", "Steelix"],
     "stats": {
       "hp": 35,
       "attack": 45,
@@ -293,9 +307,9 @@
       "speed": 70
     }
   },
-  "lickitung": {
+  "Lickitung": {
     "id": 108,
-    "name": "lickitung",
+    "name": "Lickitung",
     "gen": 1,
     "type1": "normal",
     "type2": null,
@@ -305,6 +319,7 @@
     "gender": "4:4",
     "ability": ["Oblivious", "Own Tempo"],
     "weaknesses": ["fighting"],
+    "evolution": ["Lickitung", "after Rollout learned", "Lickilicky"],
     "stats": {
       "hp": 90,
       "attack": 55,
@@ -314,9 +329,9 @@
       "speed": 30
     }
   },
-  "koffing": {
+  "Koffing": {
     "id": 109,
-    "name": "koffing",
+    "name": "Koffing",
     "gen": 1,
     "type1": "poison",
     "type2": null,
@@ -326,6 +341,7 @@
     "gender": "4:4",
     "ability": ["Levitate", "Neutralizing"],
     "weaknesses": ["psychic", "ground"],
+    "evolution": ["Koffing", "Level 35", "Weezing"],
     "stats": {
       "hp": 40,
       "attack": 65,
@@ -335,9 +351,9 @@
       "speed": 35
     }
   },
-  "mew": {
+  "Mew": {
     "id": 151,
-    "name": "mew",
+    "name": "Mew",
     "gen": 1,
     "type1": "psychic",
     "type2": null,
@@ -347,6 +363,7 @@
     "gender": "genderless",
     "ability": ["Synchronize"],
     "weaknesses": ["ghost", "dark", "bug"],
+    "evolution": ["This Pokémon does not evolve."],
     "stats": {
       "hp": 100,
       "attack": 100,
@@ -356,9 +373,9 @@
       "speed": 100
     }
   },
-  "suicune": {
+  "Suicune": {
     "id": 245,
-    "name": "suicune",
+    "name": "Suicune",
     "gen": 2,
     "type1": "water",
     "type2": null,
@@ -368,6 +385,7 @@
     "gender": "genderless",
     "ability": ["Pressure"],
     "weaknesses": ["grass", "electric"],
+    "evolution": ["This Pokémon does not evolve."],
     "stats": {
       "hp": 100,
       "attack": 75,
@@ -377,9 +395,9 @@
       "speed": 85
     }
   },
-  "aggron": {
+  "Aggron": {
     "id": 306,
-    "name": "aggron",
+    "name": "Aggron",
     "gen": 3,
     "type1": "steel",
     "type2": "rock",
@@ -389,6 +407,7 @@
     "gender": "4:4",
     "ability": ["Rock Head", "Sturdy"],
     "weaknesses": ["water", "fighting", "ground"],
+    "evolution": ["Aron", "Level 32", "Lairon", "Level 42", "Aggron"],
     "stats": {
       "hp": 70,
       "attack": 110,
@@ -398,9 +417,9 @@
       "speed": 50
     }
   },
-  "rayquaza": {
+  "Rayquaza": {
     "id": 384,
-    "name": "rayquaza",
+    "name": "Rayquaza",
     "gen": 3,
     "type1": "dragon",
     "type2": "flying",
@@ -410,6 +429,7 @@
     "gender": "genderless",
     "ability": ["Air Lock"],
     "weaknesses": ["fairy", "dragon", "ice", "rock"],
+    "evolution": ["This Pokémon does not evolve."],
     "stats": {
       "hp": 105,
       "attack": 150,
@@ -419,9 +439,9 @@
       "speed": 95
     }
   },
-  "lucario": {
+  "Lucario": {
     "id": 448,
-    "name": "lucario",
+    "name": "Lucario",
     "gen": 4,
     "type1": "fighting",
     "type2": "steel",
@@ -431,6 +451,7 @@
     "gender": "1:7",
     "ability": ["Inner Focus", "Steadfast"],
     "weaknesses": ["fire", "fighting", "ground"],
+    "evolution": ["Riolu", "high Friendship, Daytime", "Lucario"],
     "stats": {
       "hp": 70,
       "attack": 110,
@@ -440,9 +461,9 @@
       "speed": 90
     }
   },
-  "serperior": {
+  "Serperior": {
     "id": 497,
-    "name": "serperior",
+    "name": "Serperior",
     "gen": 5,
     "type1": "grass",
     "type2": null,
@@ -452,6 +473,7 @@
     "gender": "1:7",
     "ability": ["Overgrow"],
     "weaknesses": ["fire", "flying", "ice", "poison", "bug"],
+    "evolution": ["Snivy", "Level 17", "Servine", "Level 36", "Serperior"],
     "stats": {
       "hp": 75,
       "attack": 75,
@@ -461,9 +483,9 @@
       "speed": 113
     }
   },
-  "zoroark": {
+  "Zoroark": {
     "id": 571,
-    "name": "zoroark",
+    "name": "Zoroark",
     "gen": 5,
     "type1": "dark",
     "type2": null,
@@ -473,6 +495,7 @@
     "gender": "1:7",
     "ability": ["Illusion"],
     "weaknesses": ["fairy", "bug", "fighting"],
+    "evolution": ["Zorua", "Level 30", "Zoroark"],
     "stats": {
       "hp": 60,
       "attack": 105,
@@ -482,9 +505,9 @@
       "speed": 105
     }
   },
-  "chandelure": {
+  "Chandelure": {
     "id": 609,
-    "name": "chandelure",
+    "name": "Chandelure",
     "gen": 5,
     "type1": "ghost",
     "type2": "fire",
@@ -494,6 +517,7 @@
     "gender": "4:4",
     "ability": ["Flash Fire", "Flame Body"],
     "weaknesses": ["ghost", "dark", "ground", "water", "rock"],
+    "evolution": ["Litwick", "Level 41", "Lampent", "use Dusk Stone", "Chandelure"],
     "stats": {
       "hp": 60,
       "attack": 55,
@@ -503,9 +527,9 @@
       "speed": 80
     }
   },
-  "cubchoo": {
+  "Cubchoo": {
     "id": 613,
-    "name": "cubchoo",
+    "name": "Cubchoo",
     "gen": 5,
     "type1": "ice",
     "type2": null,
@@ -515,6 +539,7 @@
     "gender": "4:4",
     "ability": ["Snow Cloak", "Slush Rush"],
     "weaknesses": ["fire", "steel", "fighting", "rock"],
+    "evolution": ["Cubchoo", "Level 37", "Beartic"],
     "stats": {
       "hp": 55,
       "attack": 70,
@@ -524,9 +549,9 @@
       "speed": 40
     }
   },
-  "toucannon": {
+  "Toucannon": {
     "id": 733,
-    "name": "toucannon",
+    "name": "Toucannon",
     "gen": 7,
     "type1": "normal",
     "type2": "flying",
@@ -536,6 +561,7 @@
     "gender": "4:4",
     "ability": ["Keen Eye", "Skill Link"],
     "weaknesses": ["electric", "ice", "rock"],
+    "evolution": ["Pikipek", "Level 14", "Trumbeak", "Level 28", "Toucannon"],
     "stats": {
       "hp": 80,
       "attack": 120,
