@@ -1,9 +1,9 @@
 import Title from "../../components/Title"
 
-export default function Regions () {
+export default function Profile () {
   return (
     <div>
-      <Title content="Regions" />
+      <Title content="Profile" />
     </div>
   )
 }
