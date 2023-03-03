@@ -6,44 +6,80 @@ import favorites_1 from './favorites_1.svg';
 import favorites_2 from './favorites_2.svg';
 import profile_1 from './profile_1.svg';
 import profile_2 from './profile_2.svg';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-export default function NavBar () {
-  const [currentPage, setCurrentPage] = useState("pokedex");
+export default function NavBar() {
+  const [currentPage, setCurrentPage] = useState('pokedex');
 
   return (
-    <div className="border-t-2 bottom-0 absolute h-[72px] w-full border-t-gray-1 z-0 flex justify-around">
+    <div className="absolute bottom-0 z-0 flex h-[72px] w-full justify-around border-t-2 border-t-gray-1 bg-white">
       <div
-        className="flex justify-center items-center"
-        onClick={() => setCurrentPage("pokedex")}
+        className="flex items-center justify-center"
+        onClick={() => setCurrentPage('pokedex')}
       >
         <Link to="/pokedex">
-          {currentPage === 'pokedex' ? <img src={pokedex_1} /> : <img src={pokedex_2} />}
+          <div className="flex w-[50px] flex-col">
+            {currentPage === 'pokedex' ? (
+              <>
+                <img src={pokedex_1} className="h-6" />
+                <p className="text-xs text-blue-1">Pokedéx</p>
+              </>
+            ) : (
+              <img src={pokedex_2} className="h-6" />
+            )}
+          </div>
         </Link>
       </div>
       <div
-        className="flex justify-center items-center"
-        onClick={() => setCurrentPage("regions")}
+        className="flex items-center justify-center"
+        onClick={() => setCurrentPage('regions')}
       >
         <Link to="/regions">
-          {currentPage === 'regions' ? <img src={regions_1} /> : <img src={regions_2} />}
+          <div className="flex w-[50px] flex-col">
+            {currentPage === 'regions' ? (
+              <>
+                <img src={regions_1} className="h-6" />
+                <p className="text-xs text-blue-1">Regions</p>
+              </>
+            ) : (
+              <img src={regions_2} className="h-6" />
+            )}
+          </div>
         </Link>
       </div>
       <div
-        className="flex justify-center items-center"
-        onClick={() => setCurrentPage("favorites")}
+        className="flex items-center justify-center"
+        onClick={() => setCurrentPage('favorites')}
       >
         <Link to="/favorites">
-          {currentPage === 'favorites' ? <img src={favorites_1} /> : <img src={favorites_2} />}
+          <div className="flex w-[50px] flex-col">
+            {currentPage === 'favorites' ? (
+              <>
+                <img src={favorites_1} className="h-6" />
+                <p className="text-xs text-blue-1">Favorites</p>
+              </>
+            ) : (
+              <img src={favorites_2} className="h-6" />
+            )}
+          </div>
         </Link>
       </div>
       <div
-        className="flex justify-center items-center"
-        onClick={() => setCurrentPage("profile")}
+        className="flex items-center justify-center"
+        onClick={() => setCurrentPage('profile')}
       >
         <Link to="/profile">
-          {currentPage === 'profile' ? <img src={profile_1} /> : <img src={profile_2} />}
+          <div className="flex w-[50px] flex-col">
+            {currentPage === 'profile' ? (
+              <>
+                <img src={profile_1} className="h-6" />
+                <p className="text-xs text-blue-1">Profile</p>
+              </>
+            ) : (
+              <img src={profile_2} className="h-6" />
+            )}
+          </div>
         </Link>
       </div>
     </div>

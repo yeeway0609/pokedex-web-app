@@ -22,7 +22,12 @@ export default function SearchBar() {
           value={searchTerm}
           onChange={(event) => setSearchTerm(event.target.value)}
         />
-        <button className="bg-pink-300" type="submit">送出</button>
+        <button
+          className="bg-gray-300 rounded-l"
+          type="submit"
+        >
+          Submit
+        </button>
       </form>
     </div>
   );

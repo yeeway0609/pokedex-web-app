@@ -5,15 +5,31 @@
 @layer base {
   @font-face {
     font-family: 'Poppins-Regular';
-    src: url(public/fonts/Poppins-Regular.ttf);
+    src: url(/fonts/Poppins-Regular.ttf);
   }
 
   @font-face {
     font-family: 'Poppins-SemiBold';
-    src: url(public/fonts/Poppins-SemiBold.ttf);
+    src: url(/fonts/Poppins-SemiBold.ttf);
   }
 
-  html {
+  * {
     font-family: 'Poppins-Regular';
+    position: relative;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-tile {
+    @apply h-[75x] w-full border-b-2 border-b-gray-1 px-4 py-5 font-[Poppins-SemiBold]
   }
 }

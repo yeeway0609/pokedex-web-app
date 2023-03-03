@@ -3,13 +3,13 @@ import Regions from './page/Regions';
 import Favorites from './page/Favorites';
 import Profile from './page/Profile';
 
-import TypeButton from './components/Button';
+import TypeButton from './page/Pokedex/Button';
 import NavBar from './components/NavBar';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="relative w-96 h-screen bg-white">
+    <div className="h-screen w-96 bg-white">
       <Routes>
         <Route path="/pokedex" element={<Pokedex />} />
         <Route path="/regions" element={<Regions />} />
