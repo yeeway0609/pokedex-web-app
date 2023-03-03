@@ -9,7 +9,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="w-full border-b-2 border-b-gray-1 px-4 py-5">
+    <div className="h-[90px] w-full border-b-2 border-b-gray-1 px-4 py-5">
       <form
         className="flex h-12 items-center rounded-[30px] border-2 border-gray-300 "
         onSubmit={handleSubmit}
@@ -22,12 +22,12 @@ export default function SearchBar() {
           value={searchTerm}
           onChange={(event) => setSearchTerm(event.target.value)}
         />
-        <button
+        {/* <button
           className="bg-gray-300 rounded-l"
           type="submit"
         >
           Submit
-        </button>
+        </button> */}
       </form>
     </div>
   );

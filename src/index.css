@@ -30,6 +30,6 @@
   }
 
   .page-tile {
-    @apply h-[75x] w-full border-b-2 border-b-gray-1 px-4 py-5 font-[Poppins-SemiBold]
+    @apply h-[75px] w-full border-b-2 border-b-gray-1 px-4 py-5 font-[Poppins-SemiBold]
   }
 }

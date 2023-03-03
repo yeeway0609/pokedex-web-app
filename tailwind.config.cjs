@@ -20,75 +20,75 @@ module.exports = {
           3: '#333333',
         },
         // the 18 colors below are based on pokemon's type
-        'water': {
+        'Water': {
           1: '#EBF1F8',
           2: '#0B6DC3',
         },
-        'dragon': {
+        'Dragon': {
           1: '#E4EEF6',
           2: '#0B6DC3',
         },
-        'electric': {
+        'Electric': {
           1: '#FBF8E9 ',
           2: '#F4D23C',
         },
-        'fairy': {
+        'Fairy': {
           1: '#FBF1FA',
           2: '#EC8FE6',
         },
-        'ghost': {
+        'Ghost': {
           1: '#EBEDF4',
           2: '#5269AD',
         },
-        'fire': {
+        'Fire': {
           1: '#FCF3EB',
           2: '#FF9D55',
         },
-        'ice': {
+        'Ice': {
           1: '#F1FBF9',
           2: '#73CEC0',
         },
-        'grass': {
+        'Grass': {
           1: '#EDF6EC',
           2: '#63BC5A',
         },
-        'bug': {
+        'Bug': {
           1: '#F1F6E8 ',
           2: '#91C12F',
         },
-        'fighting': {
+        'Fighting': {
           1: '#F8E9EE',
           2: '#CE416B',
         },
-        'normal': {
+        'Normal': {
           1: '#F1F2F3',
           2: '#919AA2',
         },
-        'dark': {
+        'Dark': {
           1: '#ECEBED',
           2: '#5A5465',
         },
-        'steel': {
+        'Steel': {
           1: '#ECF1F3',
           2: '#5A8EA2',
         },
-        'rock': {
+        'Rock': {
           1: '#F7F5F1',
           2: '#C5B78C',
         },
-        'psychic': {
+        'Psychic': {
           1: '#FCEEEF',
           2: '#FA7179',
         },
-        'ground': {
+        'Ground': {
           1: '#F9EFEA',
           2: '#D97845',
         },
-        'poison': {
+        'Poison': {
           1: '#F5EDF8',
           2: '#B567CE',
         },
-        'flying': {
+        'Flying': {
           1: '#F1F4FA',
           2: '#89AAE3',
         },

@@ -3,7 +3,6 @@ import Regions from './page/Regions';
 import Favorites from './page/Favorites';
 import Profile from './page/Profile';
 
-import TypeButton from './page/Pokedex/Button';
 import NavBar from './components/NavBar';
 import { Routes, Route, Link } from 'react-router-dom';
 
