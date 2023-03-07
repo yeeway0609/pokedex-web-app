@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import search from './search.svg';
+import search from '@/img/icons/search.svg';
 
 export default function SearchBar() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -7,9 +7,9 @@ export default function SearchBar() {
     event.preventDefault(); // 防止表單預設行為
     props.onSubmit(searchTerm); // 傳送表單輸入給父元件處理
   };
-
+  
   return (
-    <div className="h-[90px] w-full border-b-2 border-b-gray-1 px-4 py-5">
+    <div className="w-full">
       <form
         className="flex h-12 items-center rounded-[30px] border-2 border-gray-300 "
         onSubmit={handleSubmit}

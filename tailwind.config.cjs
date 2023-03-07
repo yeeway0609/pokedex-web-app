@@ -16,7 +16,7 @@ module.exports = {
         },
         'gray': {
           1: '#F2F2F2',
-          2: '#808080',
+          2: '#4D4D4D',
           3: '#333333',
         },
         // the 18 colors below are based on pokemon's type
@@ -92,6 +92,9 @@ module.exports = {
           1: '#F1F4FA',
           2: '#89AAE3',
         },
+      },
+      fontFamily: {
+        'Bold': 'Poppins-Semibold',
       },
     },
   },

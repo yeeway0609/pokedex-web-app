@@ -40,10 +40,9 @@ export default function TypeBadge({ type }) {
     Poison: 'text-white',
     Flying: 'text-black',
   };
+
   return (
-    <div
-      className={`mr-1 flex h-fit w-fit items-center rounded-[25px] ${bgColor[type]} px-[6px]`}
-    >
+    <div className={`mr-1 flex h-fit w-fit items-center rounded-[25px] ${bgColor[type]} px-[6px]`}>
       <div className="my-1 flex h-[20px] w-[20px] items-center justify-center rounded-[50%] bg-white">
         <img src={`src/img/icons/${type}_1.svg`} className="h-[60%] w-[60%]" />
       </div>
