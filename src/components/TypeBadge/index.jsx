@@ -1,4 +1,4 @@
-export default function TypeBadge({ type }) {
+export default function TypeBadge({ type, fullWidth = false }) {
   const bgColor = {
     Water: 'bg-Water-2',
     Dragon: 'bg-Dragon-2',
@@ -42,9 +42,9 @@ export default function TypeBadge({ type }) {
   };
 
   return (
-    <div className={`mr-1 flex h-fit w-fit items-center rounded-[25px] ${bgColor[type]} px-[6px]`}>
+    <div className={`mr-1 flex h-fit w-fit items-center rounded-[25px] px-[6px] ${bgColor[type]} ${fullWidth ? 'w-full' : ''} ${fullWidth ? 'justify-center' : ''}`}>
       <div className="my-1 flex h-[20px] w-[20px] items-center justify-center rounded-[50%] bg-white">
-        <img src={`src/img/icons/${type}_1.svg`} className="h-[60%] w-[60%]" />
+        <img src={`src/img/type/${type}_1.svg`} className="h-[60%] w-[60%]" />
       </div>
       <p className={`ml-1 mr-1 align-middle text-xs ${textColor[type]}`}>
         {type}

@@ -45,7 +45,7 @@ export default function PokemonCard({ pokemon }) {
       </div>
       <div className={`h-full w-32 rounded-2xl ${bgColor[pokemon.type1][1]}`}>
         <img
-          src={`src/img/icons/${pokemon.type1}_2.svg`}
+          src={`src/img/type/${pokemon.type1}_2.svg`}
           className="h-full w-full py-2"
         />
         <div className={`absolute top-0 flex h-full w-full justify-center rounded-2xl bg-gradient-to-tl ${bgColor[pokemon.type1][2]}`}>
