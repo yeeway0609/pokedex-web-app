@@ -5,5 +5,7 @@
 
 ## Demo
 ```
+cd pokedex-web-app
+npm add --D vite
 npm run dev
 ```
