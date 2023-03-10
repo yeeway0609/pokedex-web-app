@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import PokemonData from '@/data/pokemon.json';
 
-function EvolutionCard({ evolutionForm }) {
-  const thisPokemon = PokemonData[evolutionForm];
+function EvolutionCard({ pokemon }) {
+  const thisPokemon = PokemonData[pokemon];
   const bgColor = {
     Water: 'bg-Water-2',
     Dragon: 'bg-Dragon-2',
@@ -22,12 +23,31 @@ function EvolutionCard({ evolutionForm }) {
     Poison: 'bg-Poison-2',
     Flying: 'bg-Flying-2',
   };
-  
+
   return (
-    <div className="rounded-xl border-2 border-gray-1">
-      <div>{thisPokemon.name}</div>
-      <div>{thisPokemon.id}</div>
-    </div>
+    <Link to={`/${thisPokemon.name}`}className="flex h-24 rounded-[90px] border-2 border-gray-1">
+      <div className={`w-28 ${bgColor[thisPokemon.type1]} rounded-[90px] flex justify-center items-center`}>
+        <img src={`src/img/type/${thisPokemon.type1}_3.svg`} className="absolute w-[90%] h-[80%]"/>
+        <img src={`src/img/pokemons/${thisPokemon.name}_3.png`} className="absolute"/>
+      </div>
+      <div className="ml-3 my-2">
+        <p className="text-lg font-bold">{thisPokemon.name}</p>
+        <p className="text-sm text-gray-2 font-bold">No.{`${thisPokemon.id}`.padStart(3, '0')}</p>
+        <div className="flex mt-1">
+          <div className={`${bgColor[thisPokemon.type1]} h-5 w-20 rounded-xl flex justify-center items-center mr-1`}>
+            <img src={`src/img/type/${thisPokemon.type1}_2.svg`} />
+          </div>
+          {thisPokemon.type2 === null ? (
+            <></>
+          ) : (
+            <div className={`${bgColor[thisPokemon.type2]} h-5 w-20 rounded-xl flex justify-center items-center`}>
+              <img src={`src/img/type/${thisPokemon.type2}_2.svg`} />
+            </div>
+          )
+          }
+        </div>
+      </div>
+    </Link>
   );
 }
 

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useParams, useNavigate } from 'react-router-dom';
 import PokemonData from '@/data/pokemon.json';
 import TypeBadge from '@/components/TypeBadge';
@@ -11,11 +12,14 @@ import species from '@/img/icons/species.svg';
 import ability from '@/img/icons/ability.svg';
 import male from '@/img/icons/male.svg';
 import female from '@/img/icons/female.svg';
+import blue_arrow from '@/img/icons/blue_arrow.svg';
 
 function PokemonInfo() {
   const navigate = useNavigate();
   const { pokemonName } = useParams();
   const thisPokemon = PokemonData[pokemonName];
+  const maleRatio = thisPokemon.gender[2] / 8 * 100;
+  const maleRatioWidth = `w-[${maleRatio}%]`;
   const bgColor = {
     Water: 'bg-Water-2',
     Dragon: 'bg-Dragon-2',
@@ -38,7 +42,7 @@ function PokemonInfo() {
   };
 
   return (
-    <div className="page-scrolling z-0 h-full">
+    <div className="page-scrolling z-10 h-full bg-white">
       <div className="absolute -ml-4 -mt-4 aspect-square w-full overflow-hidden">
         <div className={`aspect-square w-[150%] rounded-full ${bgColor[thisPokemon.type1]} -left-1/4 -top-[90%]`}></div>
       </div>
@@ -46,11 +50,9 @@ function PokemonInfo() {
         <img src={`src/img/type/${thisPokemon.type1}_3.svg`} className="h-44" />
       </div>
       <div className="flex h-12 items-center justify-between">
-        <img
-          src={chevron}
-          className="h-full cursor-pointer"
-          onClick={() => navigate(-1)}
-        />
+        <Link to="/pokedex" className="h-full">
+          <img src={chevron} className="h-full" />
+        </Link>
         <img src={unliked} className="h-2/3 pr-2" />
       </div>
       <div className="flex h-48 w-full items-end justify-center">
@@ -100,7 +102,22 @@ function PokemonInfo() {
       </div>
       <div className="mt-5">
         <p className="text-center">GENDER</p>
-        <p>{`${thisPokemon.gender}`}</p>
+        {thisPokemon.gender === "genderless" ? (
+          <>
+            <div className="w-full h-2 bg-gray-1 rounded-md"></div>
+            <p className="text-center text-gray-2 text-sm">Unknown</p>
+          </>
+        ) : (
+          <>
+            <div className="w-full h-2 bg-[#FF7596] rounded-md">
+              <div className={`${maleRatioWidth} h-2 bg-[#2551C3] rounded-l-md`}></div>
+            </div>
+            <div className="flex justify-between">
+              <p><img src={male} className="inline mb-1" />{maleRatio}%</p>
+              <p><img src={female} className="inline mb-1" />{100 - maleRatio}%</p>
+            </div>
+          </>
+        )}
       </div>
       <div className="mt-5">
         <p className="text-xl font-bold">Weaknesses</p>
@@ -113,10 +130,27 @@ function PokemonInfo() {
       <div className="mt-5">
         <p className="text-xl font-bold">Evolution</p>
         <div className="mt-2 rounded-xl border-2 border-gray-1 px-4 py-6">
-          {thisPokemon.evolution.map((value) => {
-            return <div>{value}</div>
-          })}
-          <EvolutionCard evolutionForm={thisPokemon.evolution[0]} />
+          {thisPokemon.evolution[0] === "This Pokémon does not evolve." ? (
+            <>
+              <p className="mb-4">This Pokémon does not evolve.</p>
+              <EvolutionCard pokemon={thisPokemon.name} />
+            </>
+          ) : (
+            <>
+              {thisPokemon.evolution.map((value, index) => {
+                if (index % 2 == 0) {
+                  return <EvolutionCard pokemon={value} />
+                } else if (index % 2 == 1) {
+                  return (
+                    <div className="my-2 flex justify-center">
+                      <img src={blue_arrow}/>
+                      <p className="ml-3">{value}</p>
+                    </div>
+                  )
+                }
+              })}
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ export default function NavBar() {
   const [currentPage, setCurrentPage] = useState('pokedex');
 
   return (
-    <div className="absolute bottom-0 z-0 flex h-[72px] w-full justify-around border-t-2 border-t-gray-1 bg-white">
+    <div className="absolute bottom-0 flex h-[72px] w-full justify-around border-t-2 border-t-gray-1 bg-white">
       <div
         className="flex items-center justify-center"
         onClick={() => setCurrentPage('pokedex')}
