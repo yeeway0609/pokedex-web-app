@@ -96,7 +96,7 @@ function PokemonInfo() {
           <img src={ability} className="inline mr-1" />
           <span className="text-sm text-gray-2">ABILITY</span>
           <div className="rounded-xl border-2 border-gray-1 text-center text-lg">
-            {`${thisPokemon.ability}`}
+            {thisPokemon.ability.map((value) => <p>{value}</p>)}
           </div>
         </div>
       </div>
