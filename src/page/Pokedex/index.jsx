@@ -1,15 +1,19 @@
+import Header from '@/layout/header';
 import SearchBar from "./SearchBar"
 import TypeListButton from "./TypeListButton"
 import OrderListButton from "./OrderListButton"
 import PokemonCard from "@/components/PokemonCard"
-import PokemonData from '@/data/pokemon.json'
+import { useContext } from "react";
+import { PokemonContext } from "@/context/PokemonContext";
 
 export default function Pokedex () {
+  const {PokemonData} = useContext(PokemonContext);
+
   return (
     <div className="h-full">
-      <div className="page-title">
+      <Header>
         <SearchBar />
-      </div>
+      </Header>
       <div className="page-scrolling pb-0">
         <div className="flex justify-between mb-4">
           <TypeListButton type="All types" bgColor="bg-gray-3" textColor="text-white" />
@@ -17,9 +21,8 @@ export default function Pokedex () {
           <OrderListButton order="A-Z" />
         </div>
         <div>
-          {/* iterate object keys to show all pokemons */}
           {Object.keys(PokemonData).map((key, index) => {
-            return <PokemonCard pokemon={PokemonData[key]} key={index} />
+            return <PokemonCard thisPokemon={PokemonData[key]} key={index} />
           })}
         </div>
       </div>

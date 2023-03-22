@@ -1,15 +1,22 @@
-import Fav_NotLogIn from './Fav_NotLogIn';
-import Fav_LogIn from './Fav_LogIn';
+import { useContext } from "react";
+import { LogInContext } from "@/context/LogInContext";
+import Header from '@/layout/header';
+import Fav_NotLoggedIn from './Fav_NotLoggedIn';
+import Fav_LoggedIn from './Fav_LoggedIn';
 
 export default function Favorites() {
+  const isLoggedIn = useContext(LogInContext);
+
   return (
     <div className="h-full">
-      <div className="page-title">
+      <Header>
         Favorites
-      </div>
-      <div className="page-scrolling flex flex-col items-center justify-center px-4 pt-16">
-        <Fav_LogIn />
-      </div>
+      </Header>
+      {isLoggedIn ? (
+        <Fav_LoggedIn />
+      ) : (
+        <Fav_NotLoggedIn />
+      )}
     </div>
   );
 }

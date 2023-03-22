@@ -29,10 +29,6 @@
     display: none;
   }
 
-  .page-title {
-    @apply flex h-20 w-full items-center border-b-2 border-b-gray-1 px-4 py-5 font-[Poppins-SemiBold];
-  }
-
   .page-scrolling {
     @apply no-scrollbar h-[calc(100%-80px-72px)] overflow-y-auto p-4; /* 高度要扣掉Title跟NavBar才能用overflow-auto */
   }

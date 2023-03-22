@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
-import PokemonData from '@/data/pokemon.json';
+import { useContext } from 'react';
+import { PokemonContext } from '@/context/PokemonContext';
 
-function EvolutionCard({ pokemon }) {
-  const thisPokemon = PokemonData[pokemon];
+function EvolutionCard({ pokemonName }) {
+  const { PokemonData } = useContext(PokemonContext);
+  const thisPokemon = PokemonData[pokemonName];
   const bgColor = {
     Water: 'bg-Water-2',
     Dragon: 'bg-Dragon-2',

@@ -1,11 +1,12 @@
+import Header from '@/layout/header';
 import RegionCard from './RegionCard';
 
 export default function Regions() {
   return (
     <div className="h-full">
-      <div className="page-title">
+      <Header>
         Regions
-      </div>
+      </Header>
       <div className="page-scrolling pb-0">
         <RegionCard region="Kanto" gen="1" pokemon1="Bulbasaur" pokemon2="Charmander" pokemon3="Squirtle" bgImage="bg-[url('src/img/regions/Kanto.png')]" />
         <RegionCard region="Johto" gen="2" pokemon1="Chikorita" pokemon2="Cyndaquil" pokemon3="Totodile" bgImage="bg-[url('src/img/regions/Johto.png')]" />

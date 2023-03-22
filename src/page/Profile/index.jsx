@@ -1,10 +1,23 @@
+import { useContext } from "react";
+import { LogInContext } from "@/context/LogInContext";
+import Header from "@/layout/Header";
+import LogInButton from "@/components/LogInButton";
+
 export default function Profile() {
+  const { isLoggedIn } = useContext(LogInContext);
+
   return (
     <div className="h-full">
-      <div className="page-title">
-        <div className="h-10 w-10 rounded-full bg-blue-1"></div>
-        <p className="ml-3 font-Bold">UserName</p>
-      </div>
+      <Header>
+        {isLoggedIn ? (
+          <>
+            <div className="h-10 w-10 rounded-full bg-blue-1"></div>
+            <p className="ml-3 font-Bold">UserName</p>
+          </>
+        ) : (
+          <LogInButton />
+        )}
+      </Header>
       <div className="page-scrolling">
         <div className="mb-8">
           <p className="mb-4 font-Bold text-lg">Accoount Information</p>

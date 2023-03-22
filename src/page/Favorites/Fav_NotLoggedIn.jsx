@@ -1,6 +1,6 @@
 import trainer12 from '@/img/trainers/trainer12.png';
 
-export default function Fav_NotLogIn() {
+export default function Fav_NotLoggedIn() {
   return (
     <>
       <img className="mb-4" src={trainer12} />
