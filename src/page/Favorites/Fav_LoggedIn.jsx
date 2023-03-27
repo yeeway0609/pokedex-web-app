@@ -8,8 +8,8 @@ export default function Fav_LoggedIn() {
   const [showFavorite, setShowFavorite] = useState(false);
   useEffect(() => {
     let FavNumber = 0;
-    for (let key in PokemonData) {
-      if (PokemonData[key].favorited === true) {
+    for (let index in PokemonData) {
+      if (PokemonData[index].favorited === true) {
         FavNumber++;
       }
     }
@@ -21,12 +21,12 @@ export default function Fav_LoggedIn() {
   }, [PokemonData]);
 
   return (
-    <div className="page-scrolling">
+    <>
       {showFavorite ? (
         <div>
-          {Object.keys(PokemonData).map((key, index) => {
-            if (PokemonData[key].favorited === true)
-              return <PokemonCard thisPokemon={PokemonData[key]} key={index} />;
+          {PokemonData.map((pokemon) => {
+            if (pokemon.favorited === true)
+              return <PokemonCard thisPokemon={pokemon} />;
           })}
         </div>
       ) : (
@@ -41,6 +41,6 @@ export default function Fav_LoggedIn() {
           </p>
         </div>
       )}
-    </div>
+    </>
   );
 }

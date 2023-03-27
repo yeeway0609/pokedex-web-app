@@ -1,5 +1,5 @@
-{
-  "Bulbasaur": {
+[
+  {
     "id": 1,
     "name": "Bulbasaur",
     "gen": 1,
@@ -14,7 +14,7 @@
     "evolution": ["Bulbasaur", "Level 16", "Ivysaur", "Level 32", "Venusaur"],
     "favorited": false
   },
-  "Ivysaur": {
+  {
     "id": 2,
     "name": "Ivysaur",
     "gen": 1,
@@ -29,7 +29,7 @@
     "evolution": ["Bulbasaur", "Level 16", "Ivysaur", "Level 32", "Venusaur"],
     "favorited": false
   },
-  "Venusaur": {
+  {
     "id": 3,
     "name": "Venusaur",
     "gen": 1,
@@ -44,7 +44,7 @@
     "evolution": ["Bulbasaur", "Level 16", "Ivysaur", "Level 32", "Venusaur"],
     "favorited": false
   },
-  "Charmander": {
+  {
     "id": 4,
     "name": "Charmander",
     "gen": 1,
@@ -59,7 +59,7 @@
     "evolution": ["Charmander", "Level 16", "Charmeleon", "Level 36", "Charizard"],
     "favorited": false
   },
-  "Charmeleon": {
+  {
     "id": 5,
     "name": "Charmeleon",
     "gen": 1,
@@ -74,7 +74,7 @@
     "evolution": ["Charmander", "Level 16", "Charmeleon", "Level 36", "Charizard"],
     "favorited": false
   },
-  "Charizard": {
+  {
     "id": 6,
     "name": "Charizard",
     "gen": 1,
@@ -89,7 +89,7 @@
     "evolution": ["Charmander", "Level 16", "Charmeleon", "Level 36", "Charizard"],
     "favorited": false
   },
-  "Squirtle": {
+  {
     "id": 7,
     "name": "Squirtle",
     "gen": 1,
@@ -104,7 +104,7 @@
     "evolution": ["Squirtle", "Level 16", "Wartortle", "Level 36", "Blastoise"],
     "favorited": false
   },
-  "Wartortle": {
+  {
     "id": 8,
     "name": "Wartortle",
     "gen": 1,
@@ -119,7 +119,7 @@
     "evolution": ["Squirtle", "Level 16", "Wartortle", "Level 36", "Blastoise"],
     "favorited": false
   },
-  "Blastoise": {
+  {
     "id": 9,
     "name": "Blastoise",
     "gen": 1,
@@ -134,7 +134,7 @@
     "evolution": ["Squirtle", "Level 16", "Wartortle", "Level 36", "Blastoise"],
     "favorited": false
   },
-  "Weedle": {
+  {
     "id": 13,
     "name": "Weedle",
     "gen": 1,
@@ -149,7 +149,7 @@
     "evolution": ["Weedle", "Level 7", "Kakuna", "Level 10", "Beedrill"],
     "favorited": false
   },
-  "Kakuna": {
+  {
     "id": 14,
     "name": "Kakuna",
     "gen": 1,
@@ -164,7 +164,7 @@
     "evolution": ["Weedle", "Level 7", "Kakuna", "Level 10", "Beedrill"],
     "favorited": false
   },
-  "Beedrill": {
+  {
     "id": 15,
     "name": "Beedrill",
     "gen": 1,
@@ -179,7 +179,7 @@
     "evolution": ["Weedle", "Level 7", "Kakuna", "Level 10", "Beedrill"],
     "favorited": false
   },
-  "Pikachu": {
+  {
     "id": 25,
     "name": "Pikachu",
     "gen": 1,
@@ -194,7 +194,7 @@
     "evolution": ["Pichu", "high Friendship", "Pikachu", "use Thunder Stone", "Raichu"],
     "favorited": false
   },
-  "Raichu": {
+  {
     "id": 26,
     "name": "Raichu",
     "gen": 1,
@@ -209,7 +209,7 @@
     "evolution": ["Pichu", "high Friendship", "Pikachu", "use Thunder Stone", "Raichu"],
     "favorited": false
   },
-  "Clefairy": {
+  {
     "id": 35,
     "name": "Clefairy",
     "gen": 1,
@@ -224,7 +224,7 @@
     "evolution": ["Cleffa", "high Friendship", "Clefairy", "use Moon Stone", "Clefable"],
     "favorited": false
   },
-  "Clefable": {
+  {
     "id": 36,
     "name": "Clefable",
     "gen": 1,
@@ -239,7 +239,7 @@
     "evolution": ["Cleffa", "high Friendship", "Clefairy", "use Moon Stone", "Clefable"],
     "favorited": false
   },
-  "Diglett": {
+  {
     "id": 50,
     "name": "Diglett",
     "gen": 1,
@@ -254,7 +254,7 @@
     "evolution": ["Diglett", "Level 26", "Dugtrio"],
     "favorited": false
   },
-  "Dugtrio": {
+  {
     "id": 51,
     "name": "Dugtrio",
     "gen": 1,
@@ -269,7 +269,7 @@
     "evolution": ["Diglett", "Level 26", "Dugtrio"],
     "favorited": false
   },
-  "Onix": {
+  {
     "id": 95,
     "name": "Onix",
     "gen": 1,
@@ -284,7 +284,7 @@
     "evolution": ["Onix", "trade holding Metal Coat", "Steelix"],
     "favorited": false
   },
-  "Lickitung": {
+  {
     "id": 108,
     "name": "Lickitung",
     "gen": 1,
@@ -299,7 +299,7 @@
     "evolution": ["Lickitung", "after Rollout learned", "Lickilicky"],
     "favorited": false
   },
-  "Koffing": {
+  {
     "id": 109,
     "name": "Koffing",
     "gen": 1,
@@ -314,7 +314,7 @@
     "evolution": ["Koffing", "Level 35", "Weezing"],
     "favorited": false
   },
-  "Weezing": {
+  {
     "id": 110,
     "name": "Weezing",
     "gen": 1,
@@ -329,7 +329,7 @@
     "evolution": ["Koffing", "Level 35", "Weezing"],
     "favorited": false
   },
-  "Mew": {
+  {
     "id": 151,
     "name": "Mew",
     "gen": 1,
@@ -344,7 +344,7 @@
     "evolution": ["This Pokémon does not evolve."],
     "favorited": false
   },
-  "Pichu": {
+  {
     "id": 172,
     "name": "Pichu",
     "gen": 2,
@@ -359,7 +359,7 @@
     "evolution": ["Pichu", "high Friendship", "Pikachu", "use Thunder Stone", "Raichu"],
     "favorited": false
   },
-  "Cleffa": {
+  {
     "id": 173,
     "name": "Cleffa",
     "gen": 2,
@@ -374,7 +374,7 @@
     "evolution": ["Cleffa", "high Friendship", "Clefairy", "use Moon Stone", "Clefable"],
     "favorited": false
   },
-  "Steelix": {
+  {
     "id": 208,
     "name": "Steelix",
     "gen": 2,
@@ -389,7 +389,7 @@
     "evolution": ["Onix", "trade holding Metal Coat", "Steelix"],
     "favorited": false
   },
-  "Suicune": {
+  {
     "id": 245,
     "name": "Suicune",
     "gen": 2,
@@ -404,7 +404,7 @@
     "evolution": ["This Pokémon does not evolve."],
     "favorited": false
   },
-  "Aron": {
+  {
     "id": 304,
     "name": "Aron",
     "gen": 3,
@@ -419,7 +419,7 @@
     "evolution": ["Aron", "Level 32", "Lairon", "Level 42", "Aggron"],
     "favorited": false
   },
-  "Lairon": {
+  {
     "id": 305,
     "name": "Lairon",
     "gen": 3,
@@ -434,7 +434,7 @@
     "evolution": ["Aron", "Level 32", "Lairon", "Level 42", "Aggron"],
     "favorited": false
   },
-  "Aggron": {
+  {
     "id": 306,
     "name": "Aggron",
     "gen": 3,
@@ -449,7 +449,7 @@
     "evolution": ["Aron", "Level 32", "Lairon", "Level 42", "Aggron"],
     "favorited": false
   },
-  "Rayquaza": {
+  {
     "id": 384,
     "name": "Rayquaza",
     "gen": 3,
@@ -464,7 +464,7 @@
     "evolution": ["This Pokémon does not evolve."],
     "favorited": false
   },
-  "Riolu": {
+  {
     "id": 447,
     "name": "Riolu",
     "gen": 4,
@@ -479,7 +479,7 @@
     "evolution": ["Riolu", "high Friendship, Daytime", "Lucario"],
     "favorited": false
   },
-  "Lucario": {
+  {
     "id": 448,
     "name": "Lucario",
     "gen": 4,
@@ -494,7 +494,7 @@
     "evolution": ["Riolu", "high Friendship, Daytime", "Lucario"],
     "favorited": false
   },
-  "Lickilicky": {
+  {
     "id": 463,
     "name": "Lickilicky",
     "gen": 4,
@@ -509,7 +509,7 @@
     "evolution": ["Lickitung", "after Rollout learned", "Lickilicky"],
     "favorited": false
   },
-  "Snivy": {
+  {
     "id": 495,
     "name": "Snivy",
     "gen": 5,
@@ -524,7 +524,7 @@
     "evolution": ["Snivy", "Level 17", "Servine", "Level 36", "Serperior"],
     "favorited": false
   },
-  "Servine": {
+  {
     "id": 496,
     "name": "Servine",
     "gen": 5,
@@ -539,7 +539,7 @@
     "evolution": ["Snivy", "Level 17", "Servine", "Level 36", "Serperior"],
     "favorited": false
   },
-  "Serperior": {
+  {
     "id": 497,
     "name": "Serperior",
     "gen": 5,
@@ -554,7 +554,7 @@
     "evolution": ["Snivy", "Level 17", "Servine", "Level 36", "Serperior"],
     "favorited": false
   },
-  "Zorua": {
+  {
     "id": 570,
     "name": "Zorua",
     "gen": 5,
@@ -569,7 +569,7 @@
     "evolution": ["Zorua", "Level 30", "Zoroark"],
     "favorited": false
   },
-  "Zoroark": {
+  {
     "id": 571,
     "name": "Zoroark",
     "gen": 5,
@@ -584,7 +584,7 @@
     "evolution": ["Zorua", "Level 30", "Zoroark"],
     "favorited": false
   },
-  "Litwick": {
+  {
     "id": 607,
     "name": "Litwick",
     "gen": 5,
@@ -599,7 +599,7 @@
     "evolution": ["Litwick", "Level 41", "Lampent", "use Dusk Stone", "Chandelure"],
     "favorited": false
   },
-  "Lampent": {
+  {
     "id": 608,
     "name": "Lampent",
     "gen": 5,
@@ -614,7 +614,7 @@
     "evolution": ["Litwick", "Level 41", "Lampent", "use Dusk Stone", "Chandelure"],
     "favorited": false
   },
-  "Chandelure": {
+  {
     "id": 609,
     "name": "Chandelure",
     "gen": 5,
@@ -629,7 +629,7 @@
     "evolution": ["Litwick", "Level 41", "Lampent", "use Dusk Stone", "Chandelure"],
     "favorited": false
   },
-  "Cubchoo": {
+  {
     "id": 613,
     "name": "Cubchoo",
     "gen": 5,
@@ -644,7 +644,7 @@
     "evolution": ["Cubchoo", "Level 37", "Beartic"],
     "favorited": false
   },
-  "Beartic": {
+  {
     "id": 614,
     "name": "Beartic",
     "gen": 5,
@@ -659,7 +659,7 @@
     "evolution": ["Cubchoo", "Level 37", "Beartic"],
     "favorited": false
   },
-  "Pikipek": {
+  {
     "id": 731,
     "name": "Pikipek",
     "gen": 7,
@@ -674,7 +674,7 @@
     "evolution": ["Pikipek", "Level 14", "Trumbeak", "Level 28", "Toucannon"],
     "favorited": false
   },
-  "Trumbeak": {
+  {
     "id": 732,
     "name": "Trumbeak",
     "gen": 7,
@@ -689,7 +689,7 @@
     "evolution": ["Pikipek", "Level 14", "Trumbeak", "Level 28", "Toucannon"],
     "favorited": false
   },
-  "Toucannon": {
+  {
     "id": 733,
     "name": "Toucannon",
     "gen": 7,
@@ -704,4 +704,4 @@
     "evolution": ["Pikipek", "Level 14", "Trumbeak", "Level 28", "Toucannon"],
     "favorited": false
   }
-}
+]

@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useContext } from 'react';
 import { PokemonContext } from '@/context/PokemonContext';
 import TypeBadge from '@/components/TypeBadge';
@@ -18,22 +17,21 @@ import blue_arrow from '@/img/icons/blue_arrow.svg';
 export default function PokemonInfo() {
   const { PokemonData, setPokemonData } = useContext(PokemonContext);
   const { pokemonName } = useParams();
-  // Bug-------------------------------------------------------------
-  const thisPokemon = PokemonData[pokemonName];
+  const thisPokemon = PokemonData.find((pokemon) => {
+    return pokemon.name === pokemonName;
+  });
+
   const handleFavorite = () => {
     setPokemonData(
-      Object.keys(PokemonData).map((key, index) => {
-        if (PokemonData[key] == thisPokemon) {
-          return { ...PokemonData[key], favorited: !thisPokemon.favorited };
+      PokemonData.map(pokemon => {
+        if (pokemon == thisPokemon) {
+          return { ...pokemon, favorited: !thisPokemon.favorited };
         } else {
-          return PokemonData[key];
+          return pokemon;
         }
       })
     );
   };
-  console.log(thisPokemon)
-  // 不管是在這個頁面按下收藏還是在主頁按下收藏，可以從console發現thisPokemon從一隻寶可夢的object變成undifined
-   // Bug-------------------------------------------------------------
   const maleRatio = (thisPokemon.gender[2] / 8) * 100;
   const maleRatioWidth = `w-[${maleRatio}%]`;
   const bgColor = {

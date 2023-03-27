@@ -4,7 +4,9 @@ import { PokemonContext } from '@/context/PokemonContext';
 
 function EvolutionCard({ pokemonName }) {
   const { PokemonData } = useContext(PokemonContext);
-  const thisPokemon = PokemonData[pokemonName];
+  const thisPokemon = PokemonData.find((pokemon) => {
+    return pokemon.name === pokemonName;
+  });
   const bgColor = {
     Water: 'bg-Water-2',
     Dragon: 'bg-Dragon-2',

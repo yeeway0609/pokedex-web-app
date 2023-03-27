@@ -9,11 +9,11 @@ export default function PokemonCard({ thisPokemon }) {
   const { PokemonData, setPokemonData } = useContext(PokemonContext);
   const handleFavorite = () => {
     setPokemonData(
-      Object.keys(PokemonData).map((key, index) => {
-        if (PokemonData[key] == thisPokemon) {
-          return { ...PokemonData[key], favorited: !thisPokemon.favorited };
+      PokemonData.map((pokemon) => {
+        if (pokemon == thisPokemon) {
+          return { ...pokemon, favorited: !thisPokemon.favorited };
         } else {
-          return PokemonData[key];
+          return pokemon;
         }
       })
     );

@@ -1,13 +1,19 @@
-export default function RegionCard({
-  region,
-  gen,
-  pokemon1,
-  pokemon2,
-  pokemon3,
-  bgImage,
-}) {
+import { Link } from 'react-router-dom';
+import { useContext } from "react";
+import { GenFilterContext } from "@/context/GenFilterContext";
+
+export default function RegionCard({region, gen, pokemon1, pokemon2, pokemon3, bgImage, handleClick}) {
+  const { setGenFilter, setRegion } = useContext(GenFilterContext);
+
   return (
-    <div className={`mb-3 flex h-[100px] items-center justify-between rounded-2xl  ${bgImage} bg-cover`}>
+    <Link
+      to="/pokedex"
+      className={`mb-3 flex h-[100px] items-center justify-between rounded-2xl  ${bgImage} bg-cover`}
+      onClick={() => {
+        setGenFilter(gen);
+        setRegion(region);
+      }}
+    >
       <div class="absolute h-full w-full rounded-2xl bg-gradient-to-r from-[rgba(0,0,0,0.8)]"></div>
       <div className="z-0 flex h-full flex-col justify-center px-6 ">
         <div className="font-Bold text-white">{region}</div>
@@ -33,6 +39,6 @@ export default function RegionCard({
           />
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

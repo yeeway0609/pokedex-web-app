@@ -22,7 +22,7 @@ module.exports = {
         // the 18 colors below are based on pokemon's type
         'Water': {
           1: '#EBF1F8',
-          2: '#0B6DC3',
+          2: '#5090D6',
         },
         'Dragon': {
           1: '#E4EEF6',

@@ -4,7 +4,7 @@ import Header from "@/layout/Header";
 import LogInButton from "@/components/LogInButton";
 
 export default function Profile() {
-  const { isLoggedIn } = useContext(LogInContext);
+  const { isLoggedIn, setIsLoggedIn } = useContext(LogInContext);
 
   return (
     <div className="h-full">
@@ -19,7 +19,7 @@ export default function Profile() {
         )}
       </Header>
       <div className="page-scrolling">
-        <div className="mb-8">
+        <Section>
           <p className="mb-4 font-Bold text-lg">Accoount Information</p>
           <div className="mb-4">
             <p className="font-Bold text-sm text-gray-3">Name</p>
@@ -33,8 +33,8 @@ export default function Profile() {
             <p className="font-Bold text-sm text-gray-3">Password</p>
             <p className="text-sm text-gray-2">••••••••••••••••</p>
           </div>
-        </div>
-        <div className="mb-8">
+        </Section>
+        <Section>
           <p className="mb-4 font-Bold text-lg">Pokédex</p>
           <div className="mb-4">
             <p className="font-Bold text-sm text-gray-3">Mega evolution</p>
@@ -44,8 +44,8 @@ export default function Profile() {
             <p className="font-Bold text-sm text-gray-3">Other Form</p>
             <p className="text-sm text-gray-2">Enables the display of alternative Pokémon forms.</p>
           </div>
-        </div>
-        <div className="mb-8">
+        </Section>
+        <Section>
           <p className="mb-4 font-Bold text-lg">Language</p>
           <div className="mb-4">
             <p className="font-Bold text-sm text-gray-3">Interface</p>
@@ -55,8 +55,8 @@ export default function Profile() {
             <p className="font-Bold text-sm text-gray-3">Information in game</p>
             <p className="text-sm text-gray-2">English (US)</p>
           </div>
-        </div>
-        <div className="mb-8">
+        </Section>
+        <Section>
           <p className="mb-4 font-Bold text-lg">General</p>
           <div className="mb-4">
             <p className="font-Bold text-sm text-gray-3">Version</p>
@@ -74,8 +74,25 @@ export default function Profile() {
             <p className="font-Bold text-sm text-gray-3">About</p>
             <p className="text-sm text-gray-2">More about the app.</p>
           </div>
-        </div>
+        </Section>
+        {isLoggedIn ? (
+          <Section>
+            <p className="mb-4 font-Bold text-lg">Other</p>
+            <div className="mb-4">
+              <p className="font-Bold text-sm text-red" onClick={() => setIsLoggedIn(false)}>Log out</p>
+              <p className="text-sm text-gray-2">You are logged in as UserName.</p>
+            </div>
+          </Section>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
+}
+
+const Section = ({children}) => {
+  return (
+    <div className="mb-4">{children}</div>
+  )
 }
