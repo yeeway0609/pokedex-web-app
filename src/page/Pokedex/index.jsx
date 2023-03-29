@@ -6,7 +6,7 @@ import PokemonCard from '@/components/PokemonCard';
 import { useState, useContext } from 'react';
 import { PokemonContext } from '@/context/PokemonContext';
 import { GenFilterContext } from "@/context/GenFilterContext";
-import chevron from '@/img/icons/chevron.svg';
+
 
 export default function Pokedex() {
   const { PokemonData } = useContext(PokemonContext);

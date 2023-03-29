@@ -13,6 +13,7 @@ import ability from '@/img/icons/ability.svg';
 import male from '@/img/icons/male.svg';
 import female from '@/img/icons/female.svg';
 import blue_arrow from '@/img/icons/blue_arrow.svg';
+import { TypeColor } from "@/utils/TypeColor";
 
 export default function PokemonInfo() {
   const { PokemonData, setPokemonData } = useContext(PokemonContext);
@@ -20,7 +21,10 @@ export default function PokemonInfo() {
   const thisPokemon = PokemonData.find((pokemon) => {
     return pokemon.name === pokemonName;
   });
-
+  const pokemonImg = new URL(`../../img/pokemons/${thisPokemon.name}_1.gif`, import.meta.url).href
+  const typeIcon = new URL(`../../img/type/${thisPokemon.type1}_3.svg`, import.meta.url).href
+  const maleRatio = (thisPokemon.gender[2] / 8) * 100;
+  const maleRatioWidth = `w-[${maleRatio}%]`;
   const handleFavorite = () => {
     setPokemonData(
       PokemonData.map(pokemon => {
@@ -32,40 +36,18 @@ export default function PokemonInfo() {
       })
     );
   };
-  const maleRatio = (thisPokemon.gender[2] / 8) * 100;
-  const maleRatioWidth = `w-[${maleRatio}%]`;
-  const bgColor = {
-    Water: 'bg-Water-2',
-    Dragon: 'bg-Dragon-2',
-    Electric: 'bg-Electric-2',
-    Fairy: 'bg-Fairy-2',
-    Ghost: 'bg-Ghost-2',
-    Fire: 'bg-Fire-2',
-    Ice: 'bg-Ice-2',
-    Grass: 'bg-Grass-2',
-    Bug: 'bg-Bug-2',
-    Fighting: 'bg-Fighting-2',
-    Normal: 'bg-Normal-2',
-    Dark: 'bg-Dark-2',
-    Steel: 'bg-Steel-2',
-    Rock: 'bg-Rock-2',
-    Psychic: 'bg-Psychic-2',
-    Ground: 'bg-Ground-2',
-    Poison: 'bg-Poison-2',
-    Flying: 'bg-Flying-2',
-  };
 
   return (
     <div className="page-scrolling z-10 h-full bg-white">
       <div className="absolute -ml-4 -mt-4 aspect-square w-full overflow-hidden">
         <div
           className={`aspect-square w-[150%] rounded-full ${
-            bgColor[thisPokemon.type1]
+            TypeColor[thisPokemon.type1][1]
           } -left-1/4 -top-[90%]`}
         ></div>
       </div>
       <div className="absolute -ml-4 mt-4 flex w-full justify-center">
-        <img src={`src/img/type/${thisPokemon.type1}_3.svg`} className="h-44" />
+        <img src={typeIcon} className="h-44" />
       </div>
       <div className="flex h-12 items-center justify-between">
         <Link to="/pokedex" className="h-full">
@@ -77,7 +59,7 @@ export default function PokemonInfo() {
       </div>
       <div className="flex h-48 w-full items-end justify-center">
         <img
-          src={`src/img/pokemons/${thisPokemon.name}_1.gif`}
+          src={pokemonImg}
           className="-translate-y-1/2 scale-[200%]"
         />
       </div>

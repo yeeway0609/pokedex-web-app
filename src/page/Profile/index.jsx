@@ -19,21 +19,25 @@ export default function Profile() {
         )}
       </Header>
       <div className="page-scrolling">
-        <Section>
-          <p className="mb-4 font-Bold text-lg">Accoount Information</p>
-          <div className="mb-4">
-            <p className="font-Bold text-sm text-gray-3">Name</p>
-            <p className="text-sm text-gray-2">UserName</p>
-          </div>
-          <div className="mb-4">
-            <p className="font-Bold text-sm text-gray-3">Email</p>
-            <p className="text-sm text-gray-2">example@gmail.com</p>
-          </div>
-          <div className="mb-4">
-            <p className="font-Bold text-sm text-gray-3">Password</p>
-            <p className="text-sm text-gray-2">••••••••••••••••</p>
-          </div>
-        </Section>
+        {isLoggedIn ? (
+          <Section>
+            <p className="mb-4 font-Bold text-lg">Accoount Information</p>
+            <div className="mb-4">
+              <p className="font-Bold text-sm text-gray-3">Name</p>
+              <p className="text-sm text-gray-2">UserName</p>
+            </div>
+            <div className="mb-4">
+              <p className="font-Bold text-sm text-gray-3">Email</p>
+              <p className="text-sm text-gray-2">example@gmail.com</p>
+            </div>
+            <div className="mb-4">
+              <p className="font-Bold text-sm text-gray-3">Password</p>
+              <p className="text-sm text-gray-2">••••••••••••••••</p>
+            </div>
+          </Section>
+        ) : (
+          <></>
+        )}
         <Section>
           <p className="mb-4 font-Bold text-lg">Pokédex</p>
           <div className="mb-4">
@@ -78,7 +82,7 @@ export default function Profile() {
         {isLoggedIn ? (
           <Section>
             <p className="mb-4 font-Bold text-lg">Other</p>
-            <div className="mb-4">
+            <div className="mb-4 cursor-pointer">
               <p className="font-Bold text-sm text-red" onClick={() => setIsLoggedIn(false)}>Log out</p>
               <p className="text-sm text-gray-2">You are logged in as UserName.</p>
             </div>

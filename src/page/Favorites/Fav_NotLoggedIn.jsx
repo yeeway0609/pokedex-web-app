@@ -3,7 +3,7 @@ import LogInButton from "@/components/LogInButton";
 
 export default function Fav_NotLoggedIn() {
   return (
-    <div className="flex flex-col">
+    <div className="h-full flex flex-col justify-center">
       <img className="mb-4" src={trainer12} />
       <p className="mb-4 px-12 text-center font-Bold text-xl text-gray-3">
         You need to log in to an account to do this.
