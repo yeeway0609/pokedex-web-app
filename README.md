@@ -9,11 +9,7 @@
 - Filter: By pokemon type, By region, By sort order
 
 ## Demo
-```
-cd pokedex-web-app
-npm add --D vite
-npm run dev
-```
+[GitHub Pages](https://yeeway0609.github.io/pokedex-web-app/)
 
 ## Still Developing
 - Search for pokemon

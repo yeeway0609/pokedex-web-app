@@ -24,7 +24,14 @@ export default function PokemonInfo() {
   const pokemonImg = new URL(`../../img/pokemons/${thisPokemon.name}_1.gif`, import.meta.url).href
   const typeIcon = new URL(`../../img/type/${thisPokemon.type1}_3.svg`, import.meta.url).href
   const maleRatio = (thisPokemon.gender[2] / 8) * 100;
-  const maleRatioWidth = `w-[${maleRatio}%]`;
+  let maleRatioWidth;
+  if (maleRatio === 87.5) {
+    maleRatioWidth = "w-[87.5%]";
+  } else if (maleRatio === 50) {
+    maleRatioWidth = "w-[50%]";
+  } else if (maleRatio === 25) {
+    maleRatioWidth = "w-[25%]";
+  }
   const handleFavorite = () => {
     setPokemonData(
       PokemonData.map(pokemon => {
@@ -41,9 +48,7 @@ export default function PokemonInfo() {
     <div className="page-scrolling z-10 h-full bg-white">
       <div className="absolute -ml-4 -mt-4 aspect-square w-full overflow-hidden">
         <div
-          className={`aspect-square w-[150%] rounded-full ${
-            TypeColor[thisPokemon.type1][1]
-          } -left-1/4 -top-[90%]`}
+          className={`aspect-square w-[150%] rounded-full ${TypeColor[thisPokemon.type1][1]} -left-1/4 -top-[90%]`}
         ></div>
       </div>
       <div className="absolute -ml-4 mt-4 flex w-full justify-center">
