@@ -11,7 +11,7 @@ import { GenFilterProvider } from '@/context/GenFilterContext';
 
 function App() {
   return (
-    <div className="h-screen w-96 bg-white">
+    <div className="h-[100svh] w-96 bg-white">
       <LogInProvider>
         <PokemonProvider>
           <GenFilterProvider>

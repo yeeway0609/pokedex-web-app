@@ -46,7 +46,7 @@ export default function PokemonInfo() {
 
   return (
     <div className="page-scrolling z-10 h-full bg-white">
-      <div className="absolute -ml-4 -mt-4 aspect-square w-full overflow-hidden">
+      <div className="absolute -ml-4 -mt-[100%] xl:-mt-4 aspect-square w-full overflow-hidden">
         <div
           className={`aspect-square w-[150%] rounded-full ${TypeColor[thisPokemon.type1][1]} -left-1/4 -top-[90%]`}
         ></div>
