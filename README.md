@@ -15,4 +15,4 @@
 ## Todo
 - Search for pokemon
 - Loading page
-- Move images and data to the Firebase database (Backend)
+- Move favorites, images and pokemon data to Firebase database (Backend)
