@@ -1,5 +1,5 @@
-import { Routes, Route, Link } from 'react-router-dom';
-import NavBar from '@/layout/NavBar';
+import { Routes, Route } from 'react-router-dom';
+import NavBar from '@/components/NavBar';
 import Pokedex from '@/page/Pokedex';
 import Regions from '@/page/Regions';
 import Favorites from '@/page/Favorites';

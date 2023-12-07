@@ -1,4 +1,4 @@
-import Header from '@/layout/header';
+import Header from '@/components/header';
 import SearchBar from './SearchBar';
 import TypeFilterButton from './TypeFilterButton';
 import SortingButton from './SortingButton';

@@ -1,16 +1,18 @@
-# pokedex-web-app (work in process)
+# Pokédex - a Pokémon encyclopedia web app
 
 ## UI Design
 [Pokédex / Pokémon App By Junior Saraiva on Figma](https://www.figma.com/community/file/1202971127473077147)
 
 ## Skill
+- React: functio components, state, context and router
 - Tailwind CSS
-- Context management: Login system, Add to favorites
+- Firebase: Google Sign-In API
 - Filter: By pokemon type, By region, By sort order
 
 ## Demo
 [GitHub Pages](https://yeeway0609.github.io/pokedex-web-app/)
 
-## Still Developing
+## Todo
 - Search for pokemon
-- Google LogIn API
+- Loading page
+- Move images and data to the Firebase database (Backend)

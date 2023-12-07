@@ -1,4 +1,4 @@
-import Header from '@/layout/header';
+import Header from '@/components/header';
 import RegionCard from './RegionCard';
 
 export default function Regions() {

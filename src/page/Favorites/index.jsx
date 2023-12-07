@@ -1,4 +1,4 @@
-import Header from '@/layout/header';
+import Header from '@/components/header';
 import Fav_NotLoggedIn from './Fav_NotLoggedIn';
 import Fav_LoggedIn from './Fav_LoggedIn';
 

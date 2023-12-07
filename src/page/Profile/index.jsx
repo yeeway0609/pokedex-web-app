@@ -1,28 +1,19 @@
-import Header from "@/layout/Header";
+import Header from "@/components/Header";
 import LogInButton from "@/components/LogInButton";
-
 import firebase from '@/utils/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 export default function Profile() {
   const auth = firebase.auth();
   const [user] = useAuthState(auth);
-  let userPhotoURL = "";
-  let userDisplayName = "";
-  let userEmail = "";
-  if (user) {
-    userPhotoURL = user.photoURL;
-    userDisplayName = user.displayName;
-    userEmail = user.email;
-  }
 
   return (
     <div className="h-full">
       <Header>
         {user ? (
           <>
-            <img className="h-10 w-10 rounded-full bg-blue-1" src={userPhotoURL} alt="user photo" />
-            <p className="ml-3 font-Bold">{userDisplayName}</p>
+            <img className="h-10 w-10 rounded-full bg-blue-1" src={user.photoURL} alt="user photo" />
+            <p className="ml-3 font-Bold">{user.displayName}</p>
           </>
         ) : (
           <LogInButton />
@@ -34,11 +25,11 @@ export default function Profile() {
             <p className="mb-4 font-Bold text-lg">Accoount Information</p>
             <div className="mb-4">
               <p className="font-Bold text-sm text-gray-3">Name</p>
-              <p className="text-sm text-gray-2">{userDisplayName}</p>
+              <p className="text-sm text-gray-2">{user.displayName}</p>
             </div>
             <div className="mb-4">
               <p className="font-Bold text-sm text-gray-3">Email</p>
-              <p className="text-sm text-gray-2">{userEmail}</p>
+              <p className="text-sm text-gray-2">{user.email}</p>
             </div>
             <div className="mb-4">
               <p className="font-Bold text-sm text-gray-3">Password</p>
