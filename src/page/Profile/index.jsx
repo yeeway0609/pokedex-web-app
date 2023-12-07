@@ -1,34 +1,44 @@
-import { useContext } from "react";
-import { LogInContext } from "@/context/LogInContext";
 import Header from "@/layout/Header";
 import LogInButton from "@/components/LogInButton";
 
+import firebase from '@/utils/firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+
 export default function Profile() {
-  const { isLoggedIn, setIsLoggedIn } = useContext(LogInContext);
+  const auth = firebase.auth();
+  const [user] = useAuthState(auth);
+  let userPhotoURL = "";
+  let userDisplayName = "";
+  let userEmail = "";
+  if (user) {
+    userPhotoURL = user.photoURL;
+    userDisplayName = user.displayName;
+    userEmail = user.email;
+  }
 
   return (
     <div className="h-full">
       <Header>
-        {isLoggedIn ? (
+        {user ? (
           <>
-            <div className="h-10 w-10 rounded-full bg-blue-1"></div>
-            <p className="ml-3 font-Bold">UserName</p>
+            <img className="h-10 w-10 rounded-full bg-blue-1" src={userPhotoURL} alt="user photo" />
+            <p className="ml-3 font-Bold">{userDisplayName}</p>
           </>
         ) : (
           <LogInButton />
         )}
       </Header>
       <div className="page-scrolling">
-        {isLoggedIn ? (
+        {user ? (
           <Section>
             <p className="mb-4 font-Bold text-lg">Accoount Information</p>
             <div className="mb-4">
               <p className="font-Bold text-sm text-gray-3">Name</p>
-              <p className="text-sm text-gray-2">UserName</p>
+              <p className="text-sm text-gray-2">{userDisplayName}</p>
             </div>
             <div className="mb-4">
               <p className="font-Bold text-sm text-gray-3">Email</p>
-              <p className="text-sm text-gray-2">example@gmail.com</p>
+              <p className="text-sm text-gray-2">{userEmail}</p>
             </div>
             <div className="mb-4">
               <p className="font-Bold text-sm text-gray-3">Password</p>
@@ -79,11 +89,12 @@ export default function Profile() {
             <p className="text-sm text-gray-2">More about the app.</p>
           </div>
         </Section>
-        {isLoggedIn ? (
+
+        {user ? (
           <Section>
             <p className="mb-4 font-Bold text-lg">Other</p>
             <div className="mb-4 cursor-pointer">
-              <p className="font-Bold text-sm text-red" onClick={() => setIsLoggedIn(false)}>Log out</p>
+              <p className="font-Bold text-sm text-red" onClick={() => auth.signOut()}>Log out</p>
               <p className="text-sm text-gray-2">You are logged in as UserName.</p>
             </div>
           </Section>

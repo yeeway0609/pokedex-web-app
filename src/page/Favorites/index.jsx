@@ -1,11 +1,13 @@
-import { useContext } from "react";
-import { LogInContext } from "@/context/LogInContext";
 import Header from '@/layout/header';
 import Fav_NotLoggedIn from './Fav_NotLoggedIn';
 import Fav_LoggedIn from './Fav_LoggedIn';
 
+import firebase from '@/utils/firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+
 export default function Favorites() {
-  const { isLoggedIn } = useContext(LogInContext);
+  const auth = firebase.auth();
+  const [user] = useAuthState(auth);
 
   return (
     <div className="h-full" >
@@ -13,11 +15,7 @@ export default function Favorites() {
         Favorites
       </Header>
       <div className="page-scrolling">
-        {isLoggedIn ? (
-          <Fav_LoggedIn />
-        ) : (
-          <Fav_NotLoggedIn />
-        )}
+        {user ? <Fav_LoggedIn /> : <Fav_NotLoggedIn />}
       </div>
     </div>
   );
