@@ -7,9 +7,16 @@ import { useState, useContext } from 'react';
 import { PokemonContext } from '@/context/PokemonContext';
 import { GenFilterContext } from "@/context/GenFilterContext";
 
-
 export default function Pokedex() {
   const { PokemonData } = useContext(PokemonContext);
+
+  // Handle search submit
+  const [searchInput, setSearchInput] = useState('');
+  const handleSearchSubmit = (searchInput) => {
+    setSearchInput(searchInput);
+  };
+
+  // States for sorting filter
   const { genFilter, setGenFilter, region, setRegion } = useContext(GenFilterContext);
   const types = ['All types', 'Water', 'Dragon', 'Electric', 'Fairy', 'Ghost', 'Fire', 'Ice', 'Grass', 'Bug', 'Fighting', 'Normal', 'Dark', 'Steel', 'Rock', 'Psychic', 'Ground', 'Poison', 'Flying'];
   const [typeFilter, setTypeFilter] = useState('All types');
@@ -24,6 +31,9 @@ export default function Pokedex() {
         return false;
       }
       if (genFilter !== null && pokemon.gen !== genFilter) {
+        return false;
+      }
+      if (!pokemon.name.toLowerCase().includes(searchInput.toLowerCase())) {
         return false;
       }
       return true;
@@ -101,7 +111,7 @@ export default function Pokedex() {
         <></>
       )}
       <Header>
-        <SearchBar />
+        <SearchBar onSubmit={handleSearchSubmit} />
       </Header>
       <div className="page-scrolling pb-0">
         {(region !== null) ? (

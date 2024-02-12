@@ -36,7 +36,7 @@ export default function Fav_LoggedIn() {
             You haven't favorited any Pokémon :(
           </p>
           <p className="mb-4 text-center text-gray-2">
-            Click on the heart icon of your favor ite Pokémons and they will
+            Click on the heart icon of your favorite Pokémons and they will
             appear here.
           </p>
         </div>
